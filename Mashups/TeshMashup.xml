@@ -15,7 +15,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-07-24T14:15:25.700+05:30"
+         lastModifiedDate="2019-07-24T15:15:38.813+05:30"
          name="TeshMashup"
          projectName="TestProject"
          rows="0.0"
@@ -351,9 +351,9 @@
                           "FocusStyle" : "DefaultButtonFocusStyle",
                           "Height" : 30,
                           "HoverStyle" : "DefaultButtonHoverStyle",
-                          "IconAlignment" : "left",
+                          "IconAlignment" : "right",
                           "Id" : "button-7",
-                          "Label" : "Submit",
+                          "Label" : "Click",
                           "Left" : 375,
                           "ResponsiveLayout" : false,
                           "RoundedCorners" : true,
