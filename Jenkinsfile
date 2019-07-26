@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-				archiveArtifacts '/**'
+				output.zip archive '/**'
                 echo 'Building..'
             }
         }
