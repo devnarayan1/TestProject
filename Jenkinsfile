@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-				output.zip archive '/**'
+				zip zipFile: 'output.zip', archive: false, glob: '/**'
                 echo 'Building..'
             }
         }
