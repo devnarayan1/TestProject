@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-				zip zipFile: 'output.zip', archive: false, glob: '/**'
+				zipFile: 'output.zip' -x 'Jenkinsfile' -x '*.md' archive: false, glob: '/**'
                 echo 'Building..'
             }
         }
