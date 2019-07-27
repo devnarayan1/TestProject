@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-				zip zipFile: 'entities.zip', archive: false, glob: '/**'
+				bat 'del entities.zip'
+				zip zipFile: 'entities.zip', archive: true, glob: '/**'
                 echo 'Building..'
             }
         }
