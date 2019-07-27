@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
 				bat 'del entities.zip'
-				zip zipFile: 'entities.zip', archive: true, glob: '/**/.xml'
+				zip zipFile: 'entities.zip', archive: true, glob: '/**/*.xml'
                 echo 'Building..'
             }
         }
