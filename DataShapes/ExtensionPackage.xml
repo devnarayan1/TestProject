@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Extension Package"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.069Z"
+         name="ExtensionPackage"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="value for vendor to use for their own build purposes"
+                 name="buildNumber"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="extension package description"
+                 name="description"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="minimum version of ThingWorx this extension package can be used with"
+                 name="minimumThingWorxVersion"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="extension package name"
+                 name="name"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="version of extension package"
+                 name="packageVersion"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="vendor who created extension package"
+                 name="vendor"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataTags>
+        <DataTagVocabulary
+         description=""
+         documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#xA;"
+         homeMashup=""
+         isDynamic="true"
+         lastModifiedDate="2019-11-26T09:43:27.217Z"
+         name="PTC.Simulator.DataTag"
+         projectName="Simulator"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <VocabularyTerm
+             description=""
+             name="Humidity High"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Humidity Low"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Pitch High"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Roll High"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Temperature High"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Temperature Low"></VocabularyTerm>
+            <VocabularyTerm
+             description=""
+             name="Yaw High"></VocabularyTerm>
+        </DataTagVocabulary>
+    </DataTags>
+</Entities>

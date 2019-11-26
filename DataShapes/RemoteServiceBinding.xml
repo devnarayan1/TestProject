@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Remote service Binding"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.147Z"
+         name="RemoteServiceBinding"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Bound item name"
+                 name="name"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Source item name"
+                 name="sourceName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Request timeout"
+                 name="timeout"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

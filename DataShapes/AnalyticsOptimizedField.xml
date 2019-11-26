@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="List of lever fields with their original and optimized values"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.562Z"
+         name="AnalyticsOptimizedField"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Name of the field"
+                 name="fieldName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Optimized value of the field"
+                 name="optimalValue"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Original value of the field"
+                 name="originalValue"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

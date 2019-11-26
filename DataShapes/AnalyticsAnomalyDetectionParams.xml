@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Parameters specific to anomaly detection training requests."
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.038Z"
+         name="AnalyticsAnomalyDetectionParams"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="The number of data points that are used for training the anomaly detection model."
+                 name="numberOfDataPointsForTraining"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="The number of data points that make up a single cycle in a sinusoidal wave."
+                 name="numberOfDataPointsPerCycle"
+                 ordinal="2"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

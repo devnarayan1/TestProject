@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.690Z"
+         name="PTC.HumityHigh.SD"
+         projectName="Simulator"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "VendingSelectedStyle",
+                "defaultValue" : 75,
+                "description" : "",
+                "displayString" : "Humidity OK",
+                "name" : "Humidity OK"
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "ModerateAlarm_geMKG",
+                "defaultValue" : 85,
+                "description" : "",
+                "displayString" : "Humidity Warning",
+                "name" : "Humidity Warning"
+              }, {
+                "comparator" : "<",
+                "defaultStyleDefinition" : "TrainingStyle1",
+                "defaultValue" : 100,
+                "description" : "",
+                "displayString" : "Humidity Bad",
+                "name" : "Humidity Bad"
+              }, {
+                "defaultStyleDefinition" : "VendingSelectedStyle",
+                "defaultValue" : "",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "numeric"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.streamprocessing.DataTableProcessingSubsystem"
+         dependsOn=""
+         description="Handles Data Table Storage and Retrieval"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Data Table Processing"
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:54.858Z"
+         name="DataTableProcessingSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

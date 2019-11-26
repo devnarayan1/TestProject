@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Things>
+        <Thing
+         description="Static Helper Services"
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-11-26T09:43:27.943Z"
+         name="PTC.SimulatorHelper.Thing"
+         projectName="Simulator"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="GetThingsWithData">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="DeviceUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="DeviceUsers"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="DeviceOrg"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetDeviceProperties">
+                        <ResultType
+                         aspect.dataShape="PTC.SimulatorDeviceProperties.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="THINGNAME"
+                             description=""
+                             name="ThingName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetThings">
+                        <ResultType
+                         aspect.dataShape="PTC.SimulatorItems.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="PTC.Simulator.TT"
+                             baseType="THINGTEMPLATENAME"
+                             description=""
+                             name="TemplateName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetThingsWithData">
+                        <ResultType
+                         aspect.dataShape="PTC.SimulatorDeviceProperties.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="PTC.Simulator.TT"
+                             baseType="THINGTEMPLATENAME"
+                             description=""
+                             name="TemplateName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RandomGenerator">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="50"
+                             baseType="STRING"
+                             description=""
+                             name="randomPitch"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="50"
+                             baseType="STRING"
+                             description=""
+                             name="randomRoll"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="50.0"
+                             baseType="NUMBER"
+                             description=""
+                             name="randomYaw"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="THINGNAME"
+                             description=""
+                             name="ThingName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetDeviceProperties">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        logger.debug("Entering " + me.name +": GetDeviceProperties for ThingName=[" + ThingName+ "]" ); 
+                                        try { 
+                                          
+                                            // result: INFOTABLE dataShape: "" 
+                                            result =  Things[ThingName].GetPropertyValues(); 
+                                             
+                                        } catch (err) { 
+                                            logger.debug("An error occured in >>>>" + me.name +": GetDeviceProperties Exception " + err ); 
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetThings">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        function createEmptyTable(dataShapeName) { 
+                                                  var params = { 
+                                                    infoTableName: "Values", 
+                                                    dataShapeName: dataShapeName 
+                                                }; 
+                                               //create empty table  
+                                                return Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params); 
+                                        } 
+                                          
+                                         
+                                        logger.debug("Entering " + me.name +": GetThings for TemplateName=[" + TemplateName+ "]" );  
+                                        
+                                        try { 
+                                            result = createEmptyTable("PTC.SimulatorItems.DS"); 
+                                          
+                                            // result: INFOTABLE dataShape: "RootEntityList" 
+                                            var infoTableItems =  ThingTemplates[TemplateName].GetImplementingThings(); 
+                                          
+                                            var tableLength = infoTableItems.rows.length; 
+                                            for (var x=0; x < tableLength; x++) { 
+                                                var row = infoTableItems.rows[x]; 
+                                                //Your code here 
+                                                // result: INFOTABLE dataShape: "" 
+                                                var friendlyName =  Things[row.name].FriendlyName; 
+                                                var rowObject = new Object(); 
+                                                rowObject.Name = row.name; 
+                                                rowObject.FriendlyName = friendlyName; 
+                                                rowObject.ID = "NOT SET"; 
+                                                result.AddRow(rowObject); 
+                                            } 
+                                             
+                                        } catch (err) { 
+                                                logger.debug("An error occured in >>>>" + me.name +": GetThings Exception " + err ); 
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetThingsWithData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        logger.debug("Entering " + me.name +": GetThingsWithData for TemplateName=[" + TemplateName+ "]" );  
+                                        
+                                        try { 
+                                            //result = createEmptyTable("PTC.SimulatorItems.DS"); 
+                                          
+                                            // result: INFOTABLE dataShape: "RootEntityList" 
+                                            result = infoTableItems =  ThingTemplates[TemplateName].GetImplementingThingsWithData(); 
+                                          
+                                             
+                                        } catch (err) { 
+                                                logger.debug("An error occured in >>>>" + me.name +": GetThingsWithData Exception " + err ); 
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RandomGenerator">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // ===================================================================
+                                        // Functionality:
+                                        // Random value generator
+                                        // ===================================================================
+                                        // Author: Steve Grey-Wilson - Jan 2019 - Version Initial Version
+                                        // =================================================================== 
+                                        
+                                        // Globals
+                                        
+                                        // Functions
+                                        
+                                        
+                                        logger.debug("Entering " + me.name +": RandomGenerator for ThingName=" + ThingName);
+                                        
+                                        var message ="";
+                                        try {
+                                            
+                                            //Set  value to be a random number between 0 and 360 or the incoming random initialization value
+                                            Things[ThingName].yaw = Math.floor((Math.random() * randomYaw) + 1);
+                                            Things[ThingName].pitch =Math.floor((Math.random() * randomPitch) + 1);
+                                            Things[ThingName].roll = Math.floor((Math.random() * randomRoll) + 1);
+                                        
+                                            //Set measurement value to be a random number between 0 and 100
+                                            Things[ThingName].hum = Math.random() * 100;
+                                            Things[ThingName].temp = Math.random() * 100;
+                                        
+                                            message = message + "Yaw=" +  Things[ThingName].yaw + " ";
+                                            message = message + "Pitch=" +  Things[ThingName].pitch + " ";
+                                            message = message + "Roll=" +  Things[ThingName].roll+ " ";
+                                            message = message + "Hum=" +  Things[ThingName].hum+ " ";
+                                            message = message + "Temp=" + Things[ThingName].temp+ " ";
+                                            
+                                        
+                                        } catch(ex) {
+                                            message = "An error occured in >>>>" + me.name +": RandomGenerator Exception " + ex;
+                                        }
+                                        logger.debug(me.name + "  RandomGenerator values= " + message );
+                                        
+                                        result = message;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Groups>
+        <Group
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.322Z"
+         name="DeviceUsers"
+         projectName="Simulator"
+         scimDisplayName=""
+         scimExternalId=""
+         scimId=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <Members>
+                <Members>
+                    <Member
+                     name="testuser"
+                     type="User"></Member>
+                </Members>
+            </Members>
+        </Group>
+    </Groups>
+</Entities>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         baseThingTemplate="GenericThing"
+         description=""
+         documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;"
+         effectiveThingPackage="ConfiguredThing"
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.631Z"
+         name="PTC.Simulator.TT"
+         projectName="Simulator"
+         tags=""
+         thingPackage=""
+         valueStream="PTC.Simulator.VS">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="DeviceUsers"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="DeviceOrg"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="hum">
+                    <AlertDefinition
+                     alertType="Above"
+                     description=""
+                     enabled="true"
+                     name="HumidityHighAlert"
+                     priority="1">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.friendlyName="Limit"
+                                     baseType="NUMBER"
+                                     description="Limit to compare"
+                                     name="limit"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Limit?"
+                                     baseType="BOOLEAN"
+                                     description="Limit includes value"
+                                     name="limitInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limit>80.0</limit>
+                                    <limitInclusive>true</limitInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Alert"
+                     name="Event.Alert:Property.hum"
+                     source=""
+                     sourceProperty="hum"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="Event.Alert:Property.hum">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            logger.debug("Subscription Alert from " +me.name +"  - based on property change source=" + eventData.sourceProperty );
+                                                   
+                                                         
+                                            // tags:TAGS
+                                            var tags = new Array();
+                                            
+                                            // timestamp:DATETIME
+                                            var timestamp = new Date();
+                                            
+                                            
+                                            //Set booleans and tags for high Yaw/Pitch and Roll
+                                            var tag = {}; 
+                                            
+                                            logger.debug("Subscription Alert from " +me.name + "  Source Property =" + eventData.sourceProperty );
+                                            
+                                            // values:INFOTABLE(Datashape: PTC.SimulatorDB.DS)
+                                            var values = Things["PTC.Simulator.Stream"].CreateValues();
+                                            
+                                            values.hum = me.hum; //STRING
+                                            values.BooleanField = true; //BOOLEAN
+                                            values.temp = me.temp; //NUMBER
+                                            values.StringField = "ALERT Description=" + eventData.description + " "  + eventData.alertType ; //STRING
+                                            values.roll = me.roll; //STRING
+                                            values.DateField = eventData.ackTimestamp; //DATETIME
+                                            values.pitch = me.pitch; //STRING
+                                            values.NumberField = eventData.priority; //NUMBER
+                                            values.yaw = me.yaw; //STRING
+                                            
+                                            	var params = {
+                                                    tags : tags,
+                                                    timestamp : timestamp,
+                                                    source : me.name,
+                                                    values : values,
+                                                    location : me.location
+                                                };
+                                            // AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(PTC.SimulatorDB.DS), location:LOCATION):NOTHING
+                                            Things["PTC.Simulator.Stream"].AddStreamEntry(params);
+                                            
+                                            logger.debug("Subscription Alert from " +me.name +"  - add to PTC.Simulator.Stream");
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="Event.DataChange:Property.pitch"
+                     source=""
+                     sourceProperty="pitch"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="Event.DataChange:Property.pitch">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            logger.debug("Subscription Alert from " +me.name +"  - based on property Pitch change source=" + eventData.sourceProperty );
+                                                   
+                                                         
+                                            // tags:TAGS
+                                            var tags = new Array();
+                                            
+                                            // timestamp:DATETIME
+                                            var timestamp = new Date();
+                                            
+                                            
+                                            //Set booleans and tags for high Yaw/Pitch and Roll
+                                            var tag = {}; 
+                                             
+                                            if (me.pitch > me.PitchHighLimit) {
+                                                tag.vocabulary = "PTC.Simulator.DataTag";
+                                                tag.vocabularyTerm = "Pitch High";
+                                                tags.push(tag);
+                                                me.IsPitchHigh = true; 
+                                            } else {
+                                                me.IsPitchHigh = false; 
+                                            }   
+                                            
+                                            logger.debug("Subscription Alert from " +me.name + "  -IsYawHigh=" + me.IsYawHigh + " IsPitchHigh="+ me.IsPitchHigh + " IsRollHigh="+ me.IsRollHigh );
+                                            
+                                            if (me.IsPitchHigh == true) {
+                                            
+                                                // values:INFOTABLE(Datashape: PTC.SimulatorDB.DS)
+                                                var values = Things["PTC.Simulator.Stream"].CreateValues();
+                                            
+                                                values.hum = me.hum; //STRING
+                                                values.BooleanField = true; //BOOLEAN
+                                                values.temp = me.temp; //NUMBER
+                                                values.StringField = "PITCH HIGH " + me.pitch + " - POSSIBLE CRASH BRACE FOR IMPACT"; //STRING
+                                                values.roll = me.roll; //STRING
+                                                values.DateField = timestamp; //DATETIME
+                                                values.pitch = me.pitch; //STRING
+                                                values.NumberField = 911; //NUMBER
+                                                values.yaw = me.yaw; //STRING
+                                                
+                                                
+                                            	var params = {
+                                                    tags : tags,
+                                                    timestamp : timestamp,
+                                                    source : me.name,
+                                                    values : values,
+                                                    location : me.location
+                                                };
+                                            
+                                                // AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(PTC.SimulatorDB.DS), location:LOCATION):NOTHING
+                                                Things["PTC.Simulator.Stream"].AddStreamEntry(params);
+                                            
+                                                logger.debug("Subscription Alert from " +me.name +"  - add to PTC.Simulator.Stream");
+                                                
+                                                
+                                            
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="Event.DataChange:Property.roll"
+                     source=""
+                     sourceProperty="roll"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="Event.DataChange:Property.roll">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            logger.debug("Subscription Alert from " +me.name +"  - based on property Roll change source=" + eventData.sourceProperty );
+                                                   
+                                                         
+                                            // tags:TAGS
+                                            var tags = new Array();
+                                            
+                                            // timestamp:DATETIME
+                                            var timestamp = new Date();
+                                            
+                                            
+                                            //Set booleans and tags for high Yaw/Pitch and Roll
+                                            var tag = {}; 
+                                             
+                                            if (me.roll > me.RollhHighLimit) {
+                                                tag.vocabulary = "PTC.Simulator.DataTag";
+                                                tag.vocabularyTerm = "Roll High";
+                                                tags.push(tag);
+                                                me.IsRollHigh = true; 
+                                            } else {
+                                                me.IsRollHigh = false; 
+                                            }   
+                                            
+                                            logger.debug("Subscription Alert from " +me.name + "  -IsYawHigh=" + me.IsYawHigh + " IsPitchHigh="+ me.IsPitchHigh + " IsRollHigh="+ me.IsRollHigh );
+                                            
+                                            if (me.IsRollHigh == true) {
+                                            
+                                                // values:INFOTABLE(Datashape: PTC.SimulatorDB.DS)
+                                                var values = Things["PTC.Simulator.Stream"].CreateValues();
+                                            
+                                                values.hum = me.hum; //STRING
+                                                values.BooleanField = true; //BOOLEAN
+                                                values.temp = me.temp; //NUMBER
+                                                values.StringField = "ROLL HIGH " + me.pitch + " - POSSIBLE CRASH BRACE FOR IMPACT"; //STRING
+                                                values.roll = me.roll; //STRING
+                                                values.DateField = timestamp; //DATETIME
+                                                values.pitch = me.pitch; //STRING
+                                                values.NumberField = 911; //NUMBER
+                                                values.yaw = me.yaw; //STRING
+                                                
+                                                
+                                            	var params = {
+                                                    tags : tags,
+                                                    timestamp : timestamp,
+                                                    source : me.name,
+                                                    values : values,
+                                                    location : me.location
+                                                };
+                                            
+                                                // AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(PTC.SimulatorDB.DS), location:LOCATION):NOTHING
+                                                Things["PTC.Simulator.Stream"].AddStreamEntry(params);
+                                            
+                                                logger.debug("Subscription Alert from " +me.name +"  - add to PTC.Simulator.Stream");
+                                                
+                                                
+                                            
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="DataChange"
+                     name="Event.DataChange:Property.yaw"
+                     source=""
+                     sourceProperty="yaw"
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="Event.DataChange:Property.yaw">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            logger.debug("Subscription Alert from " +me.name +"  - based on property change source=" + eventData.sourceProperty );
+                                                   
+                                                         
+                                            // tags:TAGS
+                                            var tags = new Array();
+                                            
+                                            // timestamp:DATETIME
+                                            var timestamp = new Date();
+                                            
+                                            
+                                            //Set booleans and tags for high Yaw/Pitch and Roll
+                                            var tag = {}; 
+                                             
+                                            if (me.yaw > me.YawHighLimit) {
+                                                tag.vocabulary = "PTC.Simulator.DataTag";
+                                                tag.vocabularyTerm = "Yaw High";
+                                                tags.push(tag);
+                                                me.IsYawHigh = true; 
+                                            } else {
+                                                me.IsYawHigh = false; 
+                                            }   
+                                            
+                                            logger.debug("Subscription Alert from " +me.name + "  -IsYawHigh=" + me.IsYawHigh + " IsPitchHigh="+ me.IsPitchHigh + " IsRollHigh="+ me.IsRollHigh );
+                                            
+                                            if (me.IsYawHigh == true) {
+                                            
+                                                // values:INFOTABLE(Datashape: PTC.SimulatorDB.DS)
+                                                var values = Things["PTC.Simulator.Stream"].CreateValues();
+                                            
+                                                values.hum = me.hum; //STRING
+                                                values.BooleanField = true; //BOOLEAN
+                                                values.temp = me.temp; //NUMBER
+                                                values.StringField = "YAW HIGH " + me.yaw + " - POSSIBLE CRASH BRACE FOR IMPACT"; //STRING
+                                                values.roll = me.roll; //STRING
+                                                values.DateField = timestamp; //DATETIME
+                                                values.pitch = me.pitch; //STRING
+                                                values.NumberField = 911; //NUMBER
+                                                values.yaw = me.yaw; //STRING
+                                                
+                                                
+                                            	var params = {
+                                                    tags : tags,
+                                                    timestamp : timestamp,
+                                                    source : me.name,
+                                                    values : values,
+                                                    location : me.location
+                                                };
+                                            
+                                                // AddStreamEntry(tags:TAGS, timestamp:DATETIME, source:STRING("me.name"), values:INFOTABLE(PTC.SimulatorDB.DS), location:LOCATION):NOTHING
+                                                Things["PTC.Simulator.Stream"].AddStreamEntry(params);
+                                            
+                                                logger.debug("Subscription Alert from " +me.name +"  - add to PTC.Simulator.Stream");
+                                                
+                                                
+                                            
+                                            }
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription
+                     description=""
+                     enabled="true"
+                     eventName="Timer"
+                     name="Type.Thing:Entity.PTC.SimulatorTimer.Thing:Event.Timer"
+                     source="PTC.SimulatorTimer.Thing"
+                     sourceProperty=""
+                     sourceType="Thing">
+                        <ServiceImplementation
+                         description=""
+                         handlerName="Script"
+                         name="Type.Thing:Entity.PTC.SimulatorTimer.Thing:Event.Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable
+                                 description=""
+                                 isMultiRow="false"
+                                 name="Script"
+                                 ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition
+                                             baseType="STRING"
+                                             description="code"
+                                             name="code"
+                                             ordinal="0"></FieldDefinition>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code>
+                                            <![CDATA[
+                                            logger.debug("Subscription fired from based on timer by " + me.name);
+                                            
+                                            // result: STRING
+                                            var result = me.RandomGenerator();
+                                            ]]>
+                                            </code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="PTC.Simulator.TS"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="DeviceUsers"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="System"
+                         type="User"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="DeviceOrg"
+                     type="Organization"></Principal>
+                </Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

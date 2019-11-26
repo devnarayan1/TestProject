@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <StyleThemes>
+        <StyleTheme
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.734Z"
+         name="PTC.Simulator.STYLE"
+         projectName="Simulator"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "props" : [ {
+                "name" : "global-color-core-primary",
+                "value" : "#2E4BB1"
+              }, {
+                "name" : "global-color-core-danger",
+                "value" : "#E51D23"
+              }, {
+                "name" : "global-color-core-secondary1",
+                "value" : "#F9B612"
+              }, {
+                "name" : "global-text-header-fontfamily",
+                "value" : "Helvetica"
+              }, {
+                "name" : "global-text-label-fontfamily",
+                "value" : "Helvetica"
+              }, {
+                "name" : "global-text-body-fontfamily",
+                "value" : "Helvetica"
+              }, {
+                "name" : "global-text-link-fontfamily",
+                "value" : "Helvetica"
+              }, {
+                "name" : "e-button-primary-bordercolor",
+                "value" : "#E51D23"
+              }, {
+                "name" : "e-button-primary-hover-backgroundcolor",
+                "value" : "#CCCCCC"
+              }, {
+                "name" : "e-button-primary-pressed-backgroundcolor",
+                "value" : "#CCCCCC"
+              }, {
+                "name" : "e-button-primary-pressed-fontcolor",
+                "value" : "#F9B612"
+              }, {
+                "name" : "e-list-bordercolor",
+                "value" : "#2E4BB1"
+              }, {
+                "name" : "e-list-row-bordercolor",
+                "value" : "#2E4BB1"
+              }, {
+                "name" : "e-list-row-backgroundcolor",
+                "value" : "#CCCCCC"
+              }, {
+                "name" : "e-list-row-backgroundcolor-hover",
+                "value" : "#F9B612"
+              }, {
+                "name" : "global-color-bg-primary",
+                "value" : "#F9B612"
+              }, {
+                "name" : "global-color-bg-secondary",
+                "value" : "#CCCCCC"
+              }, {
+                "name" : "global-color-line-border",
+                "value" : "#2E4BB1"
+              }, {
+                "name" : "global-color-line-interior",
+                "value" : "#E51D23"
+              }, {
+                "name" : "global-color-line-divider",
+                "value" : "#E51D23"
+              } ],
+              "version" : "0.1"
+            }
+            ]]>
+            </content>
+            <preview></preview>
+        </StyleTheme>
+    </StyleThemes>
+</Entities>

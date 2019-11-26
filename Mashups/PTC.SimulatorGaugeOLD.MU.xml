@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.781Z"
+         name="PTC.SimulatorGaugeOLD.MU"
+         projectName="Simulator"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 aspect.ordinal="1"
+                 baseType="NUMBER"
+                 description="High Limit"
+                 name="GaugeHighLimit"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 aspect.ordinal="0"
+                 baseType="THINGNAME"
+                 description="Thing Name"
+                 name="GaugeName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 aspect.ordinal="3"
+                 baseType="STRING"
+                 description="Title"
+                 name="GaugeTitle"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 aspect.ordinal="2"
+                 baseType="NUMBER"
+                 description="Value"
+                 name="GaugeValue"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "92ca749f-3a1f-4149-8970-a37be9fd7db1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "GaugeValue",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "gauge-5",
+                "TargetSection" : ""
+              }, {
+                "Id" : "032a22bd-4385-441f-a140-0f51af28833e",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "GaugeHighLimit",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "MaxValue",
+                  "TargetPropertyBaseType" : "NUMBER",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "gauge-5",
+                "TargetSection" : ""
+              }, {
+                "Id" : "a1da6c07-e4ee-497e-8785-a772923d5d29",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "GaugeTitle",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Legend",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "gauge-5",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleTheme" : "PTC.Simulator.STYLE",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "IN",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "THINGNAME",
+                    "Description" : "Thing Name",
+                    "ParameterName" : "GaugeName"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "IN",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "NUMBER",
+                    "Description" : "High Limit",
+                    "ParameterName" : "GaugeHighLimit"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "IN",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "NUMBER",
+                    "Description" : "Value",
+                    "ParameterName" : "GaugeValue"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "IN",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "Title",
+                    "ParameterName" : "GaugeTitle"
+                  } ],
+                  "id_index" : 6,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "Id" : "flexcontainer-2",
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultContainerStyle",
+                    "Type" : "flexcontainer",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "row",
+                    "flex-grow" : 1,
+                    "flex-height" : 0,
+                    "flex-shrink" : 1,
+                    "flex-width" : 0,
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "isLocked" : true,
+                    "justify-content" : "flex-start",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Aperture" : 270,
+                      "Area" : "UI",
+                      "CenterDiameter" : 20,
+                      "CenterStyle" : "DefaultGaugeCenterStyle",
+                      "DisplayName" : "gauge-5",
+                      "FormatNeedle" : true,
+                      "GaugeBorder" : 20,
+                      "GaugeBorderStyle" : "DefaultGaugeBorderStyle",
+                      "GaugeFaceStyle" : "DefaultGaugeFaceStyle",
+                      "GaugeStyle" : "DefaultGaugeStyle",
+                      "Height" : 200,
+                      "Id" : "gauge-5",
+                      "Intervals" : 10,
+                      "IntervalsPerLabel" : 2,
+                      "LabelDecimals" : 0,
+                      "LabelDigits" : 3,
+                      "LabelDisplayMode" : "inside",
+                      "LabelStyle" : "DefaultGaugeLabelStyle",
+                      "Left" : 75,
+                      "Legend" : "",
+                      "LegendDisplayMode" : "top",
+                      "LegendStyle" : "DefaultGaugeLegendStyle",
+                      "MaxValue" : 100,
+                      "MinValue" : 0,
+                      "MinorTickLength" : 4,
+                      "MinorTicks" : 4,
+                      "NeedleDiameter" : 20,
+                      "NeedleStyle" : "DefaultGaugeNeedleStyle",
+                      "ReferenceAngle" : 225,
+                      "ResponsiveLayout" : true,
+                      "RingWidth" : 10,
+                      "ShowDataLoading" : true,
+                      "TickLength" : 8,
+                      "TickStyle" : "DefaultGaugeTickStyle",
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 45,
+                      "Type" : "gauge",
+                      "ValueDecimals" : 0,
+                      "ValueDigits" : 3,
+                      "ValueDisplayMode" : "none",
+                      "ValueFormatter_StateParameters" : [ ],
+                      "ValueStyle" : "DefaultGaugeValueStyle",
+                      "Visible" : true,
+                      "Width" : 200,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Gauge",
+                      "__supportsTooltip" : true,
+                      "isLocked" : false
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

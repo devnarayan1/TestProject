@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ExtensionPackages>
+        <ExtensionPackage
+         aspect.isExtension="true"
+         buildNumber=""
+         dependsOn=""
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-11T12:33:06.423Z"
+         migratorClass=""
+         minimumThingWorxVersion="8.0.0"
+         name="FileUtilities"
+         packageVersion="1.0.4"
+         projectName=""
+         tags=""
+         vendor="ThingWorx Labs">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </ExtensionPackage>
+    </ExtensionPackages>
+</Entities>

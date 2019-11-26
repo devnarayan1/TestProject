@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="A five number summary (min, lowerQuartile, median, upperQuartile, max"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.069Z"
+         name="AnalyticsFiveNumberSummaryResult"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The lower quartile (25th percentile) value in a set of numbers"
+                 name="lowerQuartile"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The maximum value in a set of numbers"
+                 name="max"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The median (50th percentile) value in a set of numbers"
+                 name="median"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The minimum value in a set of numbers"
+                 name="min"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The upper quartile (75th percentile) value in a set of numbers"
+                 name="upperQuartile"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

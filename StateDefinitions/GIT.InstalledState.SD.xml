@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isExtension="true"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-11T12:33:10.531Z"
+         name="GIT.InstalledState.SD"
+         projectName="GitBackup"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "",
+                "defaultValue" : "true",
+                "description" : "",
+                "displayString" : "Installed",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "",
+                "description" : "",
+                "displayString" : "Not Installed",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

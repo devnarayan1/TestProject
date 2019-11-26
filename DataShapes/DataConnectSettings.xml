@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="DataShape used for data connect settings"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.603Z"
+         name="DataConnectSettings"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The data connect application id"
+                 name="dataConnectApplicationId"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The data connect application key/password"
+                 name="dataConnectApplicationKey"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The data connect url"
+                 name="dataConnectUrl"
+                 ordinal="1"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

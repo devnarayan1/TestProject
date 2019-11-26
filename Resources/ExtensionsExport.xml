@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Resources>
+        <Resource
+         aspect.isCreatable="false"
+         aspect.isEditableExtensionObject="false"
+         aspect.isExtension="true"
+         className="com.thingworx.resources.ExtensionsExport"
+         description="Exports installed extensions to a repository (File or SourceControl), optionally enables import on versions 7.2.1+"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-11T12:33:13.520Z"
+         name="ExtensionsExport"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Resource>
+    </Resources>
+</Entities>

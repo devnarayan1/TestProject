@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isExtension="true"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-11T12:33:10.508Z"
+         name="GIT.RepoURL.STATE"
+         projectName="GitBackup"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "",
+                "defaultValue" : "BitBucket",
+                "description" : "",
+                "displayString" : "BitBucket",
+                "name" : "BitBucket"
+              }, {
+                "defaultStyleDefinition" : "",
+                "defaultValue" : "Other",
+                "description" : "",
+                "displayString" : "Other",
+                "name" : "Other"
+              }, {
+                "defaultStyleDefinition" : "",
+                "description" : "",
+                "displayString" : "BitBucket",
+                "name" : "BitBucket"
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

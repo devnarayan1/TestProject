@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-11T12:33:10.778Z"
+         name="GitBackup.NewTab.Mashup"
+         projectName="GitBackup"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "ConfigurationTables" : { },
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "8c4b904c-b488-47f0-ab24-ca531eff9d3a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "isEdit",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression-3",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "navigation-2",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "expression-3",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "43c006f4-38f1-498b-bb85-493290dbcae7"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultContainerStyle",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 3,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "panel-1",
+                    "Height" : 200,
+                    "HideScrollbars" : true,
+                    "HorizontalAnchor" : "left",
+                    "Id" : "panel-1",
+                    "Left" : 15,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultContainerStyle",
+                    "Top" : 30,
+                    "Type" : "panel",
+                    "VerticalAnchor" : "top",
+                    "Visible" : true,
+                    "Width" : 300,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Alignment" : "center",
+                      "Area" : "UI",
+                      "ClickOutsideToClose" : false,
+                      "CustomClass" : "new-tab-nav",
+                      "DisplayName" : "navigation-2",
+                      "FixedPopupHeight" : 620,
+                      "FixedPopupWidth" : 520,
+                      "Height" : 50,
+                      "IconAlignment" : "left",
+                      "Id" : "navigation-2",
+                      "Left" : 0,
+                      "MashupName" : "GitBackup.NewRepo.Mashup",
+                      "MashupParameters" : [ {
+                        "BaseType" : "BOOLEAN",
+                        "Description" : "",
+                        "ParameterName" : "isEdit",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "0"
+                          },
+                          "baseType" : "BOOLEAN",
+                          "description" : "",
+                          "name" : "isEdit",
+                          "ordinal" : 0
+                        }
+                      }, {
+                        "BaseType" : "STRING",
+                        "Description" : "",
+                        "ParameterName" : "ThingName",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "ordinal" : "1"
+                          },
+                          "baseType" : "STRING",
+                          "description" : "",
+                          "name" : "ThingName",
+                          "ordinal" : 0
+                        }
+                      }, {
+                        "BaseType" : "INFOTABLE",
+                        "Description" : "",
+                        "ParameterName" : "userRepositories",
+                        "ParmDef" : {
+                          "aspects" : {
+                            "dataShape" : "QueryRepository.DataShape",
+                            "ordinal" : "2"
+                          },
+                          "baseType" : "INFOTABLE",
+                          "description" : "",
+                          "name" : "userRepositories",
+                          "ordinal" : 0
+                        }
+                      } ],
+                      "MessageToShow" : "Mashup must be selected",
+                      "ModalPopupOpacity" : 0.5,
+                      "NavigationActiveStyle" : {
+                        "backgroundColor" : "rgba(0,0,0,0.05)",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "GIT.AddNewTabIcon.ME",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "NavigationFocusStyle" : "DefaultContainerStyle",
+                      "NavigationHoverStyle" : {
+                        "backgroundColor" : "rgba(0,0,0,0.03)",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "GIT.AddNewTabIcon.ME",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "PopupScrolling" : "auto",
+                      "PopupTitle" : "",
+                      "PopupTitleStyle" : "DefaultContainerStyle",
+                      "ReloadOnReplace" : false,
+                      "ResponsiveLayout" : false,
+                      "RoundedCorners" : false,
+                      "ShowCloseButton" : false,
+                      "ShowDataLoading" : true,
+                      "ShowMessageIfNoMashup" : false,
+                      "Style" : {
+                        "backgroundColor" : "#f7f8fc",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "GIT.AddNewTabIcon.ME",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "TabSequence" : 0,
+                      "TargetWindow" : "modal-popup",
+                      "Text" : "",
+                      "ToolTipField" : "Add Repo",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 0,
+                      "Transparent" : false,
+                      "Type" : "navigation",
+                      "Visible" : true,
+                      "Width" : 50,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Navigation",
+                      "__supportsTooltip" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "AutoEvaluate" : false,
+                      "DataChangeType" : "VALUE",
+                      "DisplayName" : "expression-3",
+                      "Expression" : "false",
+                      "FireOnFirstValue" : false,
+                      "Height" : 28,
+                      "Id" : "expression-3",
+                      "Left" : 365,
+                      "OutputBaseType" : "BOOLEAN",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Top" : 65,
+                      "Type" : "expression",
+                      "Visible" : true,
+                      "Width" : 200,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Expression"
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

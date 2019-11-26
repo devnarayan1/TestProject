@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Logs>
+        <Log
+         aspect.isCreatable="false"
+         aspect.isSystemObject="true"
+         description="Security Log"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.218Z"
+         logLevel="WARN"
+         name="SecurityLog"
+         projectName=""
+         tags="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABjElEQVR42u2ZvUoDQRSFg5aiLCKi
+            iAoWgoXoA1inEHwBGy1ELHwFKwuxVlBBUHwBBVsbG0EUEQOWmiJdGo0/iETGszKBMOTOTiY7yYIn
+            8LGETO45H+zObkhOKZWrx/c1l88PgnVwCp5BFSh9jN+f6c+HfDPMrn99WxVAoVFwDL514SSqev14
+            xwVQYhV8OBY3+QRrHRFAcBfY9SxucgC62y2wk1L5GnttE0DYsmOpL1DSR5f1K8EFEDIMXi0l3sEW
+            mDa+NwO2E66XNzASWsB23l8nFYh3HnBjmbEfTADD+/TO0Sj4DvQ4Xj+94N5y2kWhBBaF0Hj/n2xy
+            +52qu9GZLIUSOBQCjzzv3CfNzmtV4EoInPcUWBDm3YYSeBICxzwFJoR5xVACRSEw8hSIhHkvFKAA
+            Bf6zAAb0gw1woW/5NaRfXAVjnSsFYd6Pse4SbIIBV4GHlJ/10+LRVUBlFQpQgAIUoAAFKEABClCA
+            AhSgAAUoQAEKUMAmUM6oQNlVIP5T+hxUMlK8ovvMNhL4BTRo0l/CJ7K8AAAAAElFTkSuQmCC
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Log>
+    </Logs>
+</Entities>

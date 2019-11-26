@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Logs>
+        <Log
+         aspect.isCreatable="false"
+         aspect.isSystemObject="true"
+         description="Script Log"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.251Z"
+         logLevel="WARN"
+         name="ScriptLog"
+         projectName=""
+         tags="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACt0lEQVR42u2aT0hVQRTGb2koBRVI
+            GBaSC7VWFQbS/3IlgY9H5SKychFWCyFBW5book2BQhRUiJsgCKIoBRdBqxYhKdEiCKQeQbkRy4pU
+            8vkNfAND+GpmPHN9F96FH3ifZ84537wzM3fmviibzUZJRvRKpVKrwVnwEsyCbGDeSya/FozEkLTJ
+            L0kBA3T6B9wEdWCbMLeM5O+Ag1LJ14IFOm6JAlzwuwH8YIwuaedX6fhtFOji2FIxMqBY2nknGASn
+            Agq4q0snSuKFxF9QwKWkChijgBOuDas4+j/GNDU258hDx0+7JN+k5tqY5/ZOEQEwrAG/2egdOMfP
+            JOf13eA7Y0yAC2CzlIAHbDCuVtlAdd3DGJ/Apv/YjlsLgFGJ0ftNAQfmBGO0Wdg6CdirnzXAmkDJ
+            bzHqvlxaQAuN3wTs/UOMMWlp7yTgMo2HAgo47vL44SvgSUABrXqSiE0A7hu5WfHhQD4IaFCfeVK/
+            4gKES6g56QLSBQEFAfEK+JB0ARnaH/MSgL83gm5P0v9YiW0F/KT9Pl8BlWDak9vLWYl5pKIf/Kry
+            pYROOwjYaRyalSRuDKj9gt4Z2jrPNwF6d3gvcQI4eczQ9qSt864YBJyxFHBDb3xAqa3zbjZ6HFDA
+            ecZ4ZbFnULS7OO9jowHeF4MjnmzPEeMKY4zwfj2PWqq5Rjwzkh8GRS4CHrHhdaMOfQ+qBnPE6Df/
+            b4y7v3nofKyDBqNsfJH3RWCXJ5U5YjxljN4lBHxm4g0+tVkK5uhof8Ax8MXrsNbC8WE6ng14Ildt
+            9HaFtPP7dPw8YO/3Oq2sDo53GOWTDpR8BfjGGB2Sjreq9676RA6sCpB8GXhtvOtaJ+F0D7gGpuh4
+            nu8FpI/R1er+lTHUt3xUqlfmYn6BoTqqUfJrzcSQ9DzLUn3TZaJ1mfgfexQErDCLsB2gvX1cE9gA
+            AAAASUVORK5CYII=
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Log>
+    </Logs>
+</Entities>

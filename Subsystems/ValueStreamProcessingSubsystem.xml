@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.streamprocessing.ValueStreamProcessingSubsystem"
+         dependsOn=""
+         description="Handles Value Stream Storage and Retrieval"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Value Stream Processing"
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:54.753Z"
+         name="ValueStreamProcessingSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

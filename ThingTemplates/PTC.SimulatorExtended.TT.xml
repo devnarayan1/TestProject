@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         baseThingTemplate="PTC.Simulator.TT"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.662Z"
+         name="PTC.SimulatorExtended.TT"
+         projectName="Simulator"
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="DeviceOrg"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RandomGenerator">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // ===================================================================
+                                        // Functionality:
+                                        //
+                                        // ===================================================================
+                                        // Author: Steve Grey-Wilson - Jan 2019 - Version Initial Version
+                                        // =================================================================== 
+                                        
+                                        // Globals
+                                        
+                                        // Functions
+                                        
+                                        logger.debug("Entering " + me.name +": RandomGenerator Extended version" );
+                                        
+                                        var message ="";
+                                        
+                                        try {
+                                            if (me.yaw == 0 || me.pitch == 0 || me.roll == 0 ) {
+                                                me.yaw = Math.floor((Math.random() * randomYaw) + 1);
+                                                me.pitch = Math.floor((Math.random() * randomYaw) + 1);
+                                                me.roll = Math.floor((Math.random() * randomYaw) + 1);
+                                            }
+                                        
+                                            var plusOrMinus = Math.random() < 0.5 ? -1 : 1; 
+                                            me.yaw = me.yaw + (Math.floor((Math.random() * 3 ))*plusOrMinus) ;
+                                            me.pitch = me.pitch + (Math.floor((Math.random() * 3 ))*plusOrMinus) ;
+                                            me.roll = me.roll + (Math.floor((Math.random() * 3 ))*plusOrMinus) ;
+                                        
+                                            me.hum =  me.hum + (Math.floor((Math.random() * 100))*plusOrMinus);
+                                            me.temp = me.temp + (Math.floor((Math.random() * 100))*plusOrMinus);
+                                        
+                                            message = message + "Yaw=" + me.yaw + " ";
+                                            message = message + "Pitch=" + me.pitch+ " ";
+                                            message = message + "Roll=" + me.roll+ " ";
+                                            message = message + "Hum=" + me.hum+ " ";
+                                            message = message + "Temp=" +me.temp+ " ";
+                                        
+                                        } catch (ex) {
+                                          
+                                            message = "An error occured in >>>>" + me.name +": RandomGenerator Exception " + ex;  
+                                            
+                                        }
+                                        
+                                        logger.debug(me.name + "  RandomGenerator values= " + message );
+                                        
+                                        result = message;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="PTC.SimulatorDeviceX.TS"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

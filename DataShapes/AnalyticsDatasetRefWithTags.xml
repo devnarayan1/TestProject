@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="An extension of the AnalyticsDatasetRef which includes information to assist in distinguishing created datasets"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.792Z"
+         name="AnalyticsDatasetRefWithTags"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The date and time that the create dataset ref job was posted"
+                 name="createdDateAndTime"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="An infotable of data (must be flat. for providing data as part of request)"
+                 name="data"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Location of the data"
+                 name="datasetUri"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="GenericStringList"
+                 baseType="INFOTABLE"
+                 description="Fields to remove from the dataset"
+                 name="exclusions"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Number of fields in the dataset"
+                 name="fieldCount"
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="SQL WHERE clause to refine the dataset"
+                 name="filter"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Structure of the data (csv, parquet)"
+                 name="format"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsDatasetMetadata"
+                 baseType="INFOTABLE"
+                 description="Metadata of the dataset (for providing data as part of request)"
+                 name="metadata"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="LONG"
+                 description="Number of rows in the dataset"
+                 name="rowCount"
+                 ordinal="9"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="GenericStringList"
+                 baseType="INFOTABLE"
+                 description="Queryable tags associated to this dataset"
+                 name="tags"
+                 ordinal="8"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

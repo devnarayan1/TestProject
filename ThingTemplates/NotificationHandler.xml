@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="GenericThing"
+         description="Template for a Thing that sends notifications when an event occurs"
+         documentationContent=""
+         effectiveThingPackage="NotificationHandlerThing"
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:53.521Z"
+         name="NotificationHandler"
+         projectName=""
+         tags=""
+         thingPackage="NotificationHandlerThing"
+         valueStream="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADeElEQVR42u2ZW0gUURjHp3KNlrDo
+            grkaJbt2eagoIi9sIkVLRfTQUi9rIPXSQ3RD6SVFIaKoKESiogu9VJQJ1UMXiEoqpaALdqGS0rIo
+            haSUqKjd/h99U8Npdm7OuLMwAz/wMuf7/v9zvvOdsyolEgkpnZE8A54Bz4BnILUGBvLELpVkgHlg
+            AzgIboAXoBckFHwD78FDcA7sACtBQBrsB0nHgLXgAugXhFrhFdgPFoChTgovBafADw0xNPP32Nxx
+            FkYcAU3gDvigMf4NqAO5dgovAy1JElJJ7ATLQbbJVVwEtrOpuBCXJukQCA5EeAG4oiL6OdgKJto4
+            SQGwETxTMbIbZJkJNgxUga9CsOsg4vD+GsIr0yzkprJbZiRANgsVy6QsBc1iCWgTtBwD/mQDisA7
+            xcvUYdab6Qx4dyzHiYIKsI471gpuAhNMmvCBGvBdmNDJam6VJdNqZAPhnTw22Qg+Gmybn8BVLtNZ
+            Bo3M5PNFjtFD54/8y1VCazwMMnUOr9V8aMVtOAeegEowTsdEFrdiedwXOjskYeYrdYRTSXSqiOgA
+            J3g1FoMp1MvBaN5XU7mEaHwDixZjUMnuAjk6m7xeee7QD8/wUb9G5xB7JCTs5D4+3eImzeXWKcbt
+            A5towjTG1vC7t//OrsYm2iMkeArKtRJYMFMMLgt57oNpOhPg0wqaw5tZDviZL20ZDrbOUp4gZVnF
+            rAQK8SVLDnSLOs4g9f9MUAt+KfLXmb1tdisG7zUz63h3FJjLvb+CoU433+R9aaFw8TtgdOAk8JMH
+            bTE4pohvnY8NtE25Yy3VrOE/cfNBu2LsbKMm6ENKiYE7U7nKcS/Tzclf8gmvdmZ08Rng18gzni+V
+            F8Fwu+q0EDwQxND31SCsdnuk5GAOt85rgiH6HBAdjA1Gs75NscFIxGnDS/t/qdbzGSQbOaq1GnZ0
+            h0ZhxgttiBsUPne06F0rrCY6qUjSYFs9/rsiVClW9qYTBpo4wWYHSzTKd7PzTgT3mf0zSDgS8REm
+            8/hpRaRUPBBbAGpBM+gFCaYP3AX7QLHktgei8sFZhWA9WkHYLeJjoN+EeJk4qE61+BHgtQXxMm1g
+            ZKpNhECXBfHtIOCWMjJrgsTnuW0jGzXhPvEmTNDvgpKbHwicAXqSiA9J6fComEgf8YKJt6CDvnYs
+            kfdPPs+AZ8AzkFJ+A2Aooiurc/HxAAAAAElFTkSuQmCC
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="Configurable options for notification handling"
+                 isHidden="true"
+                 isMultiRow="true"
+                 name="Handlers"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Configuration"
+                             baseType="DATASHAPENAME"
+                             description="The name of the data shape representing configuration data for the handler"
+                             name="configuration"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Handler ID"
+                             baseType="GUID"
+                             description="The identifier for the type of supported notification handler"
+                             name="handlerID"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Localized Name"
+                             baseType="STRING"
+                             description="The localized name for the type of notifications handler"
+                             name="localizedName"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Service Name"
+                             baseType="STRING"
+                             description="The name of the service for sending notifications on the handler"
+                             name="serviceName"
+                             ordinal="2"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

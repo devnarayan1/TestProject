@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="A matrix of predictions (rows correspond to the original classifications and columns correspond to the predicted classification)"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.692Z"
+         name="AnalyticsConfusionMatrix"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="GenericStringList"
+                 baseType="INFOTABLE"
+                 description="Classification values for the matrix (applied left to right and top to bottom)"
+                 name="labels"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsConfusionMatrixRow"
+                 baseType="INFOTABLE"
+                 description="Table showing the number of predictions for each classification"
+                 name="matrix"
+                 ordinal="2"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

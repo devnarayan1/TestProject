@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Reference to a dataset"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.163Z"
+         name="AnalyticsDatasetRef"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="An infotable of data (must be flat. for providing data as part of request)"
+                 name="data"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Location of the data"
+                 name="datasetUri"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="GenericStringList"
+                 baseType="INFOTABLE"
+                 description="Fields to remove from the dataset"
+                 name="exclusions"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="SQL WHERE clause to refine the dataset"
+                 name="filter"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Structure of the data (csv, parquet)"
+                 name="format"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsDatasetMetadata"
+                 baseType="INFOTABLE"
+                 description="Metadata of the dataset (for providing data as part of request)"
+                 name="metadata"
+                 ordinal="6"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

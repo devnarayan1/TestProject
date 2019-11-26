@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="RemoteThing"
+         description="Remote Stream"
+         documentationContent=""
+         effectiveThingPackage="RemoteStream"
+         homeMashup="StreamMashup"
+         lastModifiedDate="2019-05-14T06:10:53.517Z"
+         name="RemoteStream"
+         projectName=""
+         tags=""
+         thingPackage="RemoteStream"
+         valueStream="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACe0lEQVR42u1a23GEMAykBVqgBX7z
+            yaQDWqAFt+AWrgVaoAVaoAVaIJCRMsuObRziC1xiZvQR+YHW2Ku1LsWyLMUrW5EBZABPBIDP2/t7
+            vVq7WlXQs/rK1cxqdrVu+7twPDK+9bQ1Mn6bp1F/EgAy8SJm6cXVahO0bzYiCAluhPaS5rA0fjOT
+            BMA60SATTh4A2v6QFdZAewh+IZAMbvPN8vUM9KtTALASmGUAsvq7oKTvZ8C0NSoPgIdjXl0Ek/IM
+            uABosGMIFJwTl1+D7VygrgBQngTQut6VAUQCmIhuzwAw4Ot/CwDu90p8yiKDI1eEDvEDfMpYTQoW
+            0gSldDkoMxGNjuKf8VAKSMu5RBcCvqJScY/bMgWA0ZFkvj65rOxAba5txjZDHwPAdTHqlJm4ZHNI
+            AZUapUdqBMcD2Bp9yc7AVU8G8CcACJMYZB/PPm9RCn9HToNu2p2jFCzUEUPsONvRZ/QEFpLTJdDn
+            LiunAKCBGQrUUOKaXACO5DS8Y4a50wCQgFnrWNL7RqwNAPDKaZAOlUsX/RSAdaT5zhNo69tCISlB
+            fZ4GwB4FmgE8GUBPuuVlALgOcc/6/c4ASqC2HrT7DPpfL/w90KUFmg3KaWA2C1TbK3OlyAM1cfhM
+            F3DrkctDjJymL8PWpLyRNT6ZcCSXz7Rrnyzm/oUajSnuil+Lt9Vt1GhkcZfvzDNeHa9Wo0fFXQOg
+            WqDi6XI1Glnc3SUnos36UjUaU9zlwpcv414i5mJqo7H10AzgjBqNKe7yfqfaZ3upGo0p7vIPGABw
+            vosaPSruWhhjIcjHXdRosLhLJfQFAixvo0aPirtAr6HfmdOr0fyvBhnAsX0AsHFKZdPmwbYAAAAA
+            SUVORK5CYII=
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Data Shape Configuration"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Data Shape"
+                             baseType="DATASHAPENAME"
+                             description="Data shape"
+                             name="dataShape"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <dataShape></dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Stream Settings"
+                 isMultiRow="false"
+                 name="StreamProcessorSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="2500.0"
+                             aspect.friendlyName="Max no. of Stream Writes in Process Block"
+                             baseType="NUMBER"
+                             description="Maximum number of stream writes to process in one block"
+                             name="maximumBlockSize"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="250000.0"
+                             aspect.friendlyName="Max Queue Size"
+                             baseType="NUMBER"
+                             description="Maximum number of stream entries to queue (will be rejected after that)"
+                             name="maximumQueueSize"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="2000.0"
+                             aspect.friendlyName="Max Wait Time Before Flushing Stream Buffer (millisec)"
+                             baseType="NUMBER"
+                             description="Maximum wait time before flushing stream buffer in milliseconds"
+                             name="maximumWaitTime"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5.0"
+                             aspect.friendlyName="Buffer Status Scan Rate (millisec)"
+                             baseType="NUMBER"
+                             description="Rate at which to check the buffer status in milliseconds"
+                             name="scanRate"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="500.0"
+                             aspect.friendlyName="Max no. of Items Before Flushing Stream Buffer"
+                             baseType="NUMBER"
+                             description="Maximum number of items to accumulate before flushing stream buffer"
+                             name="sizeThreshold"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <maximumBlockSize>2500.0</maximumBlockSize>
+                            <maximumQueueSize>250000.0</maximumQueueSize>
+                            <maximumWaitTime>2000.0</maximumWaitTime>
+                            <scanRate>5.0</scanRate>
+                            <sizeThreshold>500.0</sizeThreshold>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

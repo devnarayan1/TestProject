@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="GenericThing"
+         description="External content crawler"
+         documentationContent=""
+         effectiveThingPackage="ContentCrawlerThing"
+         homeMashup="ContentCrawlerMashup"
+         lastModifiedDate="2019-05-14T06:10:53.603Z"
+         name="ContentCrawler"
+         projectName=""
+         tags=""
+         thingPackage="ContentCrawlerThing"
+         valueStream="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEVUlEQVR42u2aaUhVQRTHX1lSYWVZ
+            tBcttFq0F2FRom1ERUS0QhTRKkS0fwhtEZPKTPxgoVlImx+ilYisIEqoaPtgtIe0UEJFlpW9fJ2B
+            c+HPMPe+mXvvUyI//EDumTlz/nNnzpy5z0AoFAr8ywTqBdS1gLETJ5nQnigiUgz76bCNqCaWmfQz
+            HWQNESKCRJyPwTcgPrLvY5EUMIEHEczxUcBw8LsikgKiiUoeqMhHATtBQPdIChCc4IG+EU19CL4h
+            8ZJ93jbtr3q4g/hKLLLpNB1ma7EPApLA31qb/ZFOZBGNdQSUsrPvRB+FvRHxjtvc9UHAOfZVRbRS
+            2DeAwHE6AqZAh0dEjKJNKrQZ7yH4IeDnoMI+glOrsL9WxWLnOBscn+bXiPYOxA+23/Ig4CKk5V6K
+            M+ct2/8QCSabWGSbGyAiV9FmH9gXuAh+JvQ/LNlaEnfAvslNFmpHPAcnGZK9NfGJbR8NDzax1su5
+            r0gYHcHWjLgG4x5TrADtNNqTeCOt0yiwLwHbeU6J4XxGcVur32pp5jH4S7waPJ0D8cR7cHoBsoWY
+            mbNgy4bZEmfEPGIVT4QVfD60PwftOxH3wXaD34YvB5nYYC/AeTnnb2spPQZbPrd/Cs+qeabPwLMy
+            nnHhYzLxAWxXdII3PYnj2HEIKCb6E92kpfZbaicjxHXmbFYo2QrCLRsvpYRY41uIXzBgDXGZSINN
+            7YSYhEQiB1Kx4KdpIee2FhL0lTaiLkE4xZGrRG83sZjU60OJ9cRx4h4HUuNChIpyLmFEylxHDHZK
+            nSYCxPreAydibVLOY/dzI0DUNyU2jivYJjbbfuKkhyBPcV2VyX+X2bzVEruaS34wkriucFDKVWG8
+            Ir0+8yDgCzFVUQEs5pQblNqL2IapBMTxjNZIuTuPGOhwwFX4sFT+ONRSosTYTnyWst4hItYSkCyt
+            8SAH3tVh7XWR8n6aNEg4RBAboVQWImY5jCfK6K1cN1k+RMzJAb5I4CuKD7Oxm0iV4mZOgaYzn8S3
+            u2q40AwOM7ZYXkfBR1WAa5kvfNTrpK4scHCAnyW4EDCf+86FZ89tLlAy03jvFZseHAmwT27x9dKq
+            ZUwFLLH5KpEXqZNYBPsQ7ss9wDbKhYDZku9SsI2JhIDlMMBGydbWhQB5vfeDGuueXydxAGp7K1O9
+            sKkWnxgE/1W6GFnshjZz/RSwEhwvtGmTaiAg38ZHC6hoy3RueLoltHU3fgUbV3XoVGpWpAMcxsOJ
+            mOGHgGRwuErz67UT6WF8xMKBVeKHgBOQeZprtN/rEHyh5sU/B/r09CKgNWSGAsNvPjf5lA1yVllk
+            0H+Q7hsL52gpOEpwcWOKUn2Q1eQ2j/vGy3ch69r4Tjcv+0gKTN5oNwJiYPnk1nLwAa6GLQGZbgRg
+            fTOlDgQEoOp94EZABuTtmDoSsAvuD21MBRT78PncK4mwCqaaChA/Phxx2kC1QDQvn/d2N8T6fzWo
+            F/C/C/gLxBBVgwtalukAAAAASUVORK5CYII=
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="Data Thing Configuration"
+                 isMultiRow="false"
+                 name="DataThingSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Persistence Provider Name"
+                             name="persistenceProvider"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <persistenceProvider></persistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Data Shape Configuration"
+                 isMultiRow="false"
+                 name="Settings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Accumulated Data Shape"
+                             baseType="JSON"
+                             description="Accumulated Data shape"
+                             name="accumulatedDataShape"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Data Shape"
+                             baseType="DATASHAPENAME"
+                             description="Data shape"
+                             name="dataShape"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <accumulatedDataShape>
+                                <json>
+                                <![CDATA[
+                                {}
+                                ]]>
+                                </json>
+                            </accumulatedDataShape>
+                            <dataShape></dataShape>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Source Data Settings"
+                 isMultiRow="false"
+                 name="SourceData"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Content Service Name"
+                             baseType="STRING"
+                             description="Service name to load external content"
+                             name="contentServiceName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Source Thing Name"
+                             baseType="THINGNAME"
+                             description="Source thing"
+                             name="sourceThingName"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <contentServiceName></contentServiceName>
+                            <sourceThingName></sourceThingName>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Index Settings"
+                 isMultiRow="true"
+                 name="Indexes"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Field Names"
+                             baseType="STRING"
+                             description="Index fields"
+                             name="fieldNames"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Index Name"
+                             baseType="STRING"
+                             description="Index name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Field to Tag Mappings"
+                 isMultiRow="true"
+                 name="TagMappings"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Source Field Name"
+                             baseType="STRING"
+                             description="Source field name"
+                             name="sourceFieldName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Vocabulary Name"
+                             baseType="STRING"
+                             description="Vocabulary name"
+                             name="vocabularyName"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Field to Field Mappings"
+                 isMultiRow="true"
+                 name="FieldMappings"
+                 ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Destination Field Name"
+                             baseType="STRING"
+                             description="Destination field name"
+                             name="destinationFieldName"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Source Field Name"
+                             baseType="STRING"
+                             description="Source field name"
+                             name="sourceFieldName"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 description="Configurable options to tune Data Table performance"
+                 isMultiRow="false"
+                 name="PersistenceProviderCustomSettings"
+                 ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Persistence Provider Custom Settings Table"
+                             baseType="INFOTABLE"
+                             description="Persistence Provider Custom Config Table"
+                             name="customConfigTable"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <customConfigTable>
+                                <infoTable>
+                                    <DataShape>
+                                        <FieldDefinitions></FieldDefinitions>
+                                    </DataShape>
+                                    <Rows></Rows>
+                                </infoTable>
+                            </customConfigTable>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

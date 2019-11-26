@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Groups>
+        <Group
+         aspect.isSystemObject="true"
+         description="All users"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.121Z"
+         name="Users"
+         projectName=""
+         scimDisplayName=""
+         scimExternalId=""
+         scimId=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <Members>
+                <Members>
+                    <Member
+                     name="Administrator"
+                     type="User"></Member>
+                    <Member
+                     name="SuperUser"
+                     type="User"></Member>
+                    <Member
+                     name="System"
+                     type="User"></Member>
+                    <Member
+                     name="testuser"
+                     type="User"></Member>
+                </Members>
+            </Members>
+        </Group>
+    </Groups>
+</Entities>

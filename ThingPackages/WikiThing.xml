@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ThingPackages>
+        <ThingPackage
+         aspect.isSystemObject="true"
+         className="com.thingworx.collaboration.wikis.WikiThing"
+         description="Wiki"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:53.010Z"
+         name="WikiThing"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <HandlerDefinitions>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ExtensionServiceHandler"
+                 description="Extension handler"
+                 isUserDefinable="false"
+                 name="Extension"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ReflectionServiceHandler"
+                 description="Reflection handler"
+                 isUserDefinable="false"
+                 name="Reflection"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.dsl.DSLServiceHandler"
+                 description="Script handler"
+                 isUserDefinable="true"
+                 name="Script"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.WorkflowServiceHandler"
+                 description="Workflow handler"
+                 isUserDefinable="true"
+                 name="Workflow"></HandlerDefinition>
+            </HandlerDefinitions>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="Wiki"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+        </ThingPackage>
+    </ThingPackages>
+</Entities>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <PersistenceProviderPackages>
+        <PersistenceProviderPackage
+         aspect.isSystemObject="true"
+         className="com.thingworx.persistence.influxdb.InfluxPersistenceProviderPackage"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:56.321Z"
+         name="InfluxPersistenceProviderPackage"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </PersistenceProviderPackage>
+    </PersistenceProviderPackages>
+</Entities>

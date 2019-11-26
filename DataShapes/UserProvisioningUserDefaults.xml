@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Options used during user Provisioning"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.100Z"
+         name="UserProvisioningUserDefaults"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description=""
+                 name="userDefaultDescription"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="MASHUPNAME"
+                 description="Home Mashup"
+                 name="userDefaultHomeMashupName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="MASHUPNAME"
+                 description="Mobile Mashup"
+                 name="userDefaultMobileMashupName"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.tagType="ModelTags"
+                 baseType="TAGS"
+                 description=""
+                 name="userDefaultTags"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

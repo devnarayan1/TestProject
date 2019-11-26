@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.678Z"
+         name="PTC.SimulatorStartStop.SD"
+         projectName="Simulator"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "Started",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "Started",
+                "description" : "",
+                "displayString" : "Start",
+                "name" : "Start"
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "Stopped",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "Stopped",
+                "description" : "",
+                "displayString" : "Stop",
+                "name" : "Stop"
+              }, {
+                "defaultStyleDefinition" : "",
+                "description" : "",
+                "displayString" : "Stopped",
+                "name" : "Stopped"
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

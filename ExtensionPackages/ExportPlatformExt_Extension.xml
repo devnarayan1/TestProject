@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ExtensionPackages>
+        <ExtensionPackage
+         aspect.isExtension="true"
+         buildNumber=""
+         dependsOn=""
+         description="Resource for exporting and importing (on 7.x+) platform extensions"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-11T12:33:13.500Z"
+         migratorClass=""
+         minimumThingWorxVersion="5.1.0"
+         name="ExportPlatformExt_Extension"
+         packageVersion="1.0.21"
+         projectName=""
+         tags=""
+         vendor="Thingworx Labs">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </ExtensionPackage>
+    </ExtensionPackages>
+</Entities>

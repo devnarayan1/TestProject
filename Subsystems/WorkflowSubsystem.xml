@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.flow.WorkflowSubsystem"
+         dependsOn=""
+         description="Workflow Subsystem handles CRUD operations of a workflow service or subscription on Workflows"
+         documentationContent=""
+         enabled="false"
+         friendlyName="Workflow Subsystem"
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:54.926Z"
+         name="WorkflowSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

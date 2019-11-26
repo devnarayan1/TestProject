@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="The min (exclusive) and max (inclusive) values specifying a single bin, and the number of data points within that range. Only the first bin has an inclusive minimum."
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.363Z"
+         name="AnalyticsDataDistributionBin"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="number of data points in this bin"
+                 name="count"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="max range (inclusive) for this bin"
+                 name="max"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="min range (exclusive) for this bin"
+                 name="min"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

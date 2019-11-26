@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <ThingShapes>
+        <ThingShape
+         className=""
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-11-26T09:43:27.487Z"
+         name="PTC.Simulator.TS"
+         projectName="Simulator"
+         tags="">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 baseType="STRING"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="FriendlyName"
+                 ordinal="15"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="hum"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.defaultValue="75.0"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="HumidityHigh"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="false"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="IsPitchHigh"
+                 ordinal="12"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="false"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="IsRollHigh"
+                 ordinal="13"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="false"
+                 aspect.isReadOnly="false"
+                 baseType="BOOLEAN"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="IsYawHigh"
+                 ordinal="11"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="pitch"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.defaultValue="200.0"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="PitchHighLimit"
+                 ordinal="9"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="roll"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.defaultValue="200.0"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="RollHighLimit"
+                 ordinal="10"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 aspect.units="F"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="temp"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.defaultValue="75.0"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="TemperatureHigh"
+                 ordinal="7"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.isLogged="true"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="yaw"
+                 ordinal="6"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.cacheTime="0.0"
+                 aspect.dataChangeThreshold="0.0"
+                 aspect.dataChangeType="VALUE"
+                 aspect.defaultValue="200.0"
+                 aspect.isLogged="false"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 baseType="NUMBER"
+                 category=""
+                 description=""
+                 isLocalOnly="false"
+                 name="YawHighLimit"
+                 ordinal="8"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description=""
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetDeviceProperties">
+                    <ResultType
+                     aspect.dataShape="PTC.SimulatorDeviceValues.DS"
+                     baseType="INFOTABLE"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="THINGNAME"
+                         description=""
+                         name="ThingName"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description=""
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetThings">
+                    <ResultType
+                     aspect.dataShape="PTC.SimulatorItems.DS"
+                     baseType="INFOTABLE"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="PTC.Simulator.TT"
+                         baseType="THINGTEMPLATENAME"
+                         description=""
+                         name="ThingTemplate"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isAsync="false"
+                 category=""
+                 description=""
+                 isAllowOverride="true"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="RandomGenerator">
+                    <ResultType
+                     baseType="STRING"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="50.0"
+                         baseType="NUMBER"
+                         description=""
+                         name="randomPitch"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="50.0"
+                         baseType="NUMBER"
+                         description=""
+                         name="randomRoll"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="50.0"
+                         baseType="NUMBER"
+                         description=""
+                         name="randomYaw"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="GetDeviceProperties">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description=""
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    // ===================================================================
+                                    // Functionality:
+                                    // Get Device properties wrapper service
+                                    // ===================================================================
+                                    // Author: Steve Grey-Wilson - Jan 2019 - Version Initial Version
+                                    // =================================================================== 
+                                    
+                                    // Globals
+                                    
+                                    // Functions
+                                    
+                                    logger.debug("Entering " + me.name +": GetDeviceProperties for ThingName=[" + ThingName+ "]" );
+                                    try {
+                                    
+                                    	// result: INFOTABLE dataShape: ""
+                                    	result =  Things[ThingName].GetPropertyValues();
+                                        
+                                    } catch (err) {
+                                        logger.debug("An error occured in >>>>" + me.name +": GetDeviceProperties Exception " + err );
+                                    }
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="GetThings">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description=""
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    // ===================================================================
+                                    // Functionality:
+                                    // Get a List of Things wrapper service
+                                    // ===================================================================
+                                    // Author: Steve Grey-Wilson - Jan 2019 - Version Initial Version
+                                    // =================================================================== 
+                                    
+                                    // Globals
+                                    
+                                    // Functions
+                                    // +==================================================================================================================
+                                    function createEmptyTable(dataShapeName) {
+                                      		var params = {
+                                                infoTableName: "Values",
+                                                dataShapeName: dataShapeName
+                                            };
+                                           //create empty table 
+                                    		return Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                    }
+                                    
+                                    // var myTemplate =  me.GetThingTemplate();
+                                    
+                                    try {
+                                    	result = createEmptyTable("PTC.SimulatorItems.DS");
+                                    
+                                        // result: INFOTABLE dataShape: "RootEntityList"
+                                        var infoTableItems =  ThingTemplates[ThingTemplate].GetImplementingThings();
+                                    
+                                        var tableLength = infoTableItems.rows.length;
+                                        for (var x=0; x < tableLength; x++) {
+                                            var row = infoTableItems.rows[x];
+                                            //Your code here
+                                            // result: INFOTABLE dataShape: ""
+                                            var friendlyName =  Things[row.name].FriendlyName;
+                                            var rowObject = new Object();
+                                            rowObject.Name = row.name;
+                                            rowObject.FriendlyName = friendlyName;
+                                            rowObject.ID = "NOT SET";
+                                    
+                                            result.AddRow(rowObject);
+                                    
+                                        }
+                                        
+                                    } catch (err) {
+                                        
+                                            logger.debug("An error occured in >>>>" + me.name +": GetThings Exception " + err );
+                                        
+                                    }
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Script"
+                 name="RandomGenerator">
+                    <ConfigurationTables>
+                        <ConfigurationTable
+                         description=""
+                         isMultiRow="false"
+                         name="Script"
+                         ordinal="0">
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="code"
+                                     name="code"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <code>
+                                    <![CDATA[
+                                    logger.debug("Entering " + me.name +": RandomGenerator" ); 
+                                      
+                                    var message =""; 
+                                    try { 
+                                         
+                                      
+                                        //Set  value to be a random number between 0 and 360 or the incoming random initialization value 
+                                        me.yaw = Math.floor((Math.random() * randomYaw) + 1); 
+                                        me.pitch =Math.floor((Math.random() * randomPitch) + 1); 
+                                        me.roll = Math.floor((Math.random() * randomRoll) + 1); 
+                                      
+                                        //Set measurement value to be a random number between 0 and 100 
+                                        me.hum = Math.random() * 100; 
+                                        me.temp = Math.random() * 100; 
+                                      
+                                        message = message + "Yaw=" + me.yaw + " "; 
+                                        message = message + "Pitch=" + me.pitch+ " "; 
+                                        message = message + "Roll=" + me.roll+ " "; 
+                                        message = message + "Hum=" + me.hum+ " "; 
+                                        message = message + "Temp=" +me.temp+ " "; 
+                                      
+                                    } catch(ex) { 
+                                        message = "An error occured in >>>>" + me.name +": RandomGenerator Exception " + ex; 
+                                    } 
+                                    logger.debug(me.name + "  RandomGenerator values= " + message ); 
+                                      
+                                    result = message;
+                                    ]]>
+                                    </code>
+                                </Row>
+                            </Rows>
+                        </ConfigurationTable>
+                    </ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="DeviceUsers"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke></ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="DeviceOrg"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="FriendlyName"></AlertDefinitions>
+                <AlertDefinitions
+                 name="hum">
+                    <AlertDefinition
+                     alertType="Above"
+                     description="High Humidity Alert"
+                     enabled="true"
+                     name="HumidityHighAlert"
+                     priority="2">
+                        <AlertAttributes>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.friendlyName="Limit"
+                                     baseType="NUMBER"
+                                     description="Limit to compare"
+                                     name="limit"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.defaultValue="true"
+                                     aspect.friendlyName="Include Limit?"
+                                     baseType="BOOLEAN"
+                                     description="Limit includes value"
+                                     name="limitInclusive"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <limit>75.0</limit>
+                                    <limitInclusive>false</limitInclusive>
+                                </Row>
+                            </Rows>
+                        </AlertAttributes>
+                    </AlertDefinition>
+                </AlertDefinitions>
+                <AlertDefinitions
+                 name="HumidityHigh"></AlertDefinitions>
+                <AlertDefinitions
+                 name="IsPitchHigh"></AlertDefinitions>
+                <AlertDefinitions
+                 name="IsRollHigh"></AlertDefinitions>
+                <AlertDefinitions
+                 name="IsYawHigh"></AlertDefinitions>
+                <AlertDefinitions
+                 name="pitch"></AlertDefinitions>
+                <AlertDefinitions
+                 name="PitchHighLimit"></AlertDefinitions>
+                <AlertDefinitions
+                 name="roll"></AlertDefinitions>
+                <AlertDefinitions
+                 name="RollHighLimit"></AlertDefinitions>
+                <AlertDefinitions
+                 name="temp"></AlertDefinitions>
+                <AlertDefinitions
+                 name="TemperatureHigh"></AlertDefinitions>
+                <AlertDefinitions
+                 name="yaw"></AlertDefinitions>
+                <AlertDefinitions
+                 name="YawHighLimit"></AlertDefinitions>
+            </AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

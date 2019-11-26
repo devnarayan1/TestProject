@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Authenticators>
+        <Authenticator
+         aspect.isEditableSystemObject="true"
+         className="com.thingworx.security.authentication.ThingworxMobileTokenAuthenticator"
+         description="Mobile App Builder Authenticator that validates against the Thingworx Mobile Tokens"
+         documentationContent=""
+         enabled="false"
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:54.477Z"
+         name="ThingworxMobileTokenAuthenticator"
+         priority="150"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Authenticator>
+    </Authenticators>
+</Entities>

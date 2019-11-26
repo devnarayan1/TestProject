@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-09-18T13:24:03.479Z"
+         name="GitBackupTests"
+         projectName=""
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category="Test"
+                     description="General service for executing a test - needs to be overridden"
+                     isAllowOverride="true"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CheckGitThingPresence">
+                        <ResultType
+                         aspect.dataShape="TestResultData"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="ExpectedOutput"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="InputParams"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="TestResultData"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="PreviousTestResults"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="TestName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category="Test"
+                     description="General service for executing a test - needs to be overridden"
+                     isAllowOverride="true"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CheckIfFileRepositoryStillExists">
+                        <ResultType
+                         aspect.dataShape="TestResultData"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="ExpectedOutput"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="InputParams"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="TestResultData"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="PreviousTestResults"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="TestName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category="Test"
+                     description="General service for executing a test - needs to be overridden"
+                     isAllowOverride="true"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DeleteGitThing">
+                        <ResultType
+                         aspect.dataShape="TestResultData"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="ExpectedOutput"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="InputParams"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="TestResultData"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="PreviousTestResults"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="TestName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category="Test"
+                     description="General service for executing a test - needs to be overridden"
+                     isAllowOverride="true"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GitThingIsActive">
+                        <ResultType
+                         aspect.dataShape="TestResultData"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="ExpectedOutput"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="InputParams"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="TestResultData"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="PreviousTestResults"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="TestName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="true"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RunAllTestsFormatResult2">
+                        <ResultType
+                         aspect.dataShape="TestResultData"
+                         baseType="HTML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category="Test"
+                     description="General service for executing a test - needs to be overridden"
+                     isAllowOverride="true"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="TestPull">
+                        <ResultType
+                         aspect.dataShape="TestResultData"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="ExpectedOutput"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="InputParams"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="TestResultData"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="PreviousTestResults"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="TestName"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CheckGitThingPresence">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        var start_Date = new Date();
+                                        TestName = "GitThing exists";
+                                        logger.debug("---Running test --- " + TestName +" at "+ start_Date.toString()) ; 
+                                        //execute your tests here
+                                        
+                                        
+                                        var testResult = (Things["QA"]!=undefined) ? true: false; 
+                                        
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABtrLE(TestResultData)
+                                        PreviousTestResults.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: testResult,
+                                            comments: testResult ? "passed" : "failed"
+                                        });
+                                        
+                                        var end_Date = new Date();
+                                        logger.debug("---Finished test --- " + TestName+" at "+ end_Date.toString()) ; 
+                                        }
+                                        catch (ex)
+                                        {
+                                            PreviousTestResults.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: false,
+                                            comments: "failed due to exception "+ ex.toString()
+                                        	});
+                                        }
+                                        result = PreviousTestResults;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CheckIfFileRepositoryStillExists">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        var start_Date = new Date();
+                                        TestName = "GitThingFileRepoExistsAfterDelete";
+                                        logger.debug("---Running test --- " + TestName +" at "+ start_Date.toString()) ; 
+                                        //execute your tests here
+                                        
+                                        
+                                        var iftbl_FolderFileCount= Things["GitRepository"].BrowseDirectory({path: "/smartrepopath"}).getRowCount();
+                                        var testResult = (iftbl_FolderFileCount=0) ? true: false; 
+                                        
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABtrLE(TestResultData)
+                                        PreviousTestResults.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: testResult,
+                                            comments: testResult ? "passed":"The GitRepository File Contents contains files. The Git thing was not deleted successfully."
+                                        });
+                                        
+                                        var end_Date = new Date();
+                                        logger.debug("---Finished test --- " + TestName+" at "+ end_Date.toString()) ; 
+                                        }
+                                        catch (ex)
+                                        {
+                                            PreviousTestResults.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: false,
+                                            comments: "failed due to exception "+ ex.toString()
+                                        	});
+                                        }
+                                        result = PreviousTestResults;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="CreateTestData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //Depending on your application and use cases, this may imply inserting records into a database/third party system/ creating new Things, updating properties, etc
+                                         Things["GIT.Utility.Thing"].AddNewRepo({
+                                        	CommitUser: "Vladimir Rosu" /* STRING */,
+                                        	RepoPath: "/smartrepopath" /* STRING */,
+                                        	CommitEmail: "vrosu@ptc.com" /* STRING */,
+                                        	User: "vrosu" /* STRING */,
+                                        	GitRepoURL: "https://vrosu@bitbucket.org/rotwx/gitbackupqatest.git" /* STRING */,
+                                        	RepoName: "QA" /* STRING */,
+                                        	InitialBranch: "master" /* STRING */,
+                                        	FileRepo: "GitRepository" /* STRING */,
+                                        	Password: "Freespace5447" /* STRING */,
+                                             UseProxy: false,
+                                             ProxyPort:0,
+                                             ProxyURL:""
+                                        });
+                                        result = undefined;
+                                        //As a suggestion, the result of this service could be a JSON representing the input params required for the ExecuteTest services
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="DeleteGitThing">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = PreviousTestResults;
+                                        try
+                                        {
+                                        var start_Date = new Date();
+                                        TestName = "GitThing is deleted";
+                                        logger.debug("---Running test --- " + TestName +" at "+ start_Date.toString()) ; 
+                                        //execute your tests here
+                                        
+                                        //compare output of the service with the "ExpectedOutput"
+                                        Things["GIT.Utility.Thing"].DeteleGitThing({
+                                        	RepoName: "QA" /* STRING */
+                                        });
+                                        var testResult = (!Things["QA"]) ? true: false; 
+                                        //Build the results infotable
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABtrLE(TestResultData)
+                                        
+                                        result.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: testResult,
+                                            comments: testResult ? "passed" : "failed"
+                                        });
+                                        
+                                        var end_Date = new Date();
+                                        logger.debug("---Finished test --- " + TestName+" at "+ end_Date.toString()) ; 
+                                        }
+                                        catch (ex)
+                                        {
+                                          result.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: testResult,
+                                            comments: "failed due to "+ex.toString()
+                                        });  
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="DeleteTestData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //If your tests require some data, override this service to create it 
+                                        var result ={};
+                                        //Things["GIT.Utility.Thing"].DeteleGitThing({
+                                        //	RepoName: "QA" /* STRING */
+                                        //});
+                                        //Depending on your application and use cases, this may imply inserting records into a database/third party system/ creating new Things, updating properties, etc
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GitThingIsActive">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = PreviousTestResults;
+                                        try
+                                        {
+                                        var start_Date = new Date();
+                                        TestName = "GitThing is enabled";
+                                        logger.debug("---Running test --- " + TestName +" at "+ start_Date.toString()) ; 
+                                        //execute your tests here
+                                        
+                                        //compare output of the service with the "ExpectedOutput"
+                                        //mock calculation for the test result
+                                        //Things["QA"].DisableThing();
+                                        var testResult = (Things["QA"].IsEnabled()) ? true: false; 
+                                        //Build the results infotable
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABtrLE(TestResultData)
+                                        
+                                        result.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: testResult,
+                                            comments: testResult ? "passed" : "failed"
+                                        });
+                                        
+                                        var end_Date = new Date();
+                                        logger.debug("---Finished test --- " + TestName+" at "+ end_Date.toString()) ; 
+                                        }
+                                        catch (ex)
+                                        {
+                                          result.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: testResult,
+                                            comments: "failed due to "+ex.toString()
+                                        });  
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RunAllTests">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //1. Initializing the test data. Optional.
+                                        me.CreateTestData();
+                                        
+                                        //2. Create a variable that will store all the results 
+                                        var prevTestResult= Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName : "InfoTable",
+                                            dataShapeName : "TestResultData"
+                                        });
+                                        
+                                        //3. We add here sequentially the list of tests that are going to be executed.
+                                        
+                                        prevTestResult=me.CheckGitThingPresence({PreviousTestResults: prevTestResult});
+                                        prevTestResult=me.GitThingIsActive({PreviousTestResults: prevTestResult});
+                                        prevTestResult=me.TestPull({PreviousTestResults: prevTestResult});
+                                        prevTestResult=me.DeleteGitThing({PreviousTestResults: prevTestResult});
+                                        prevTestResult=me.CheckIfFileRepositoryStillExists({PreviousTestResults: prevTestResult});
+                                        
+                                        //4. Returning the result tests
+                                        result = prevTestResult;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RunAllTestsFormatResult2">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var html = "<HTML><HEAD><TITLE>Execution Of RunAllTests</TITLE><LINK rel='Stylesheet' href='css/thingworxapi.css' type='text/css'></LINK><META http-equiv='Content-Type' content='text/html'></META><META http-equiv='cache-control' content='no-cache, no-store'></META><META http-equiv='expires' content='-1'></META><META http-equiv='pragma' content='no-cache, no-store'></META></HEAD><BODY><IMG SRC=\"css/ThingworxLogo.png\"/><BR/><H1>RunAllTests</H1>";
+                                        html += "<TABLE><TR><TH>Comments</TH><TH>Expected</TH><TH>Inputs</TH><TH>Passed</TH><TH>Test Name</TH><TH>Date and Time</TH></TR>"; 
+                                        ;
+                                        for each (var row in me.RunAllTests().rows) {
+                                            html += "<TR>"; 
+                                            html += "<TD>" + row.comments + "</TD>";
+                                             html += "<TD>" + row.expectedOutput + "</TD>";
+                                             html += "<TD>" + row.inputParams + "</TD>";
+                                             html += "<TD>" + row.passed + "</TD>";
+                                             html += "<TD>" + row.testName + "</TD>";
+                                             html += "<TD>" + row.timestamp + "</TD>";
+                                            html += "</TR>"; 
+                                        }
+                                        
+                                        html += "</TABLE></BODY></HTML>"; 
+                                        
+                                        var result = html;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="TestPull">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        try {
+                                        var start_Date = new Date();
+                                        TestName = "GitThing Pull executes and we have a commit list larger than zero";
+                                        logger.debug("---Running test --- " + TestName +" at "+ start_Date.toString()) ; 
+                                        //execute your tests here
+                                        
+                                        // Result: STRING
+                                        Things["QA"].Pull({
+                                        	Force: false /* BOOLEAN */
+                                        });
+                                        var iftbl_CommitList =  Things["QA"].GetCommitList();
+                                        var testResult = (iftbl_CommitList!=undefined&&iftbl_CommitList.getRowCount()>0) ? true: false; 
+                                        
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABtrLE(TestResultData)
+                                        PreviousTestResults.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: testResult,
+                                            comments: testResult ? "passed" : "failed"
+                                        });
+                                        
+                                        var end_Date = new Date();
+                                        logger.debug("---Finished test --- " + TestName+" at "+ end_Date.toString()) ; 
+                                        }
+                                        catch (ex)
+                                        {
+                                            PreviousTestResults.AddRow({
+                                            testName: TestName, 
+                                            inputParams: InputParams,
+                                            expectedOutput: ExpectedOutput,
+                                            timestamp: new Date(),
+                                            passed: false,
+                                            comments: "failed due to exception "+ ex.toString()
+                                        	});
+                                        }
+                                        result = PreviousTestResults;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="TestingTS"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

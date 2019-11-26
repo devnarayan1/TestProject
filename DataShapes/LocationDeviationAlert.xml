@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Location deviation alert"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:51.904Z"
+         name="LocationDeviationAlert"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.friendlyName="Limit"
+                 aspect.isRequired="true"
+                 baseType="NUMBER"
+                 description="Limit to deviation from reference value"
+                 name="limit"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="true"
+                 aspect.friendlyName="Include Limit?"
+                 aspect.isRequired="false"
+                 baseType="BOOLEAN"
+                 description="Limit includes value"
+                 name="limitInclusive"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="M"
+                 aspect.friendlyName="Distance units"
+                 aspect.isRequired="true"
+                 aspect.selectOptions="K:Kilometers|M:Miles|N:Nautical Miles"
+                 baseType="STRING"
+                 description="Units of distance (M, K, N)"
+                 name="units"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Value"
+                 aspect.isRequired="true"
+                 baseType="LOCATION"
+                 description="Reference value"
+                 name="value"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

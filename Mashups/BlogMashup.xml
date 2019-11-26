@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isSystemObject="true"
+         aspect.mashupType="thingshape"
+         aspect.thingShape="Blog"
+         aspect.thingTemplate="Blog"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:54.096Z"
+         name="BlogMashup"
+         projectName=""
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="STRING"
+                 description="Entry to display"
+                 name="BlogEntryID"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="THINGNAME"
+                 description="The thing to display"
+                 name="Entity"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : { },
+              "DataBindings" : [ {
+                "Id" : "491319061448852",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "BlogEntryID",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "BlogEntryIdToShow",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Blog-1",
+                "TargetSection" : ""
+              }, {
+                "Id" : "821326826443544",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "Blog",
+                  "TargetPropertyBaseType" : "THINGNAME"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Blog-1",
+                "TargetSection" : ""
+              } ],
+              "Events" : [ ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 450,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "Tags" : [ {
+                    "vocabulary" : "Applications",
+                    "vocabularyTerm" : "SquealProduction"
+                  } ],
+                  "ThingShape" : "Blog",
+                  "Top" : 0,
+                  "Type" : "thingshapemashup",
+                  "Width" : 700,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "ThingShape Mashup",
+                  "_currentParameterDefs" : [ {
+                    "BaseType" : "STRING",
+                    "Description" : "Entry to display",
+                    "ParameterName" : "BlogEntryID"
+                  } ],
+                  "id_index" : 6
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Blog" : "",
+                    "EndDateTime" : "",
+                    "ExpandAll" : false,
+                    "Height" : 450,
+                    "HeightOfFullView" : 600,
+                    "Id" : "Blog-1",
+                    "Left" : 0,
+                    "SearchExpression" : "",
+                    "ShowExpandInSummary" : true,
+                    "ShowSearchInSummary" : false,
+                    "SortOrder" : "Newest",
+                    "Source" : "",
+                    "StartDateTime" : "",
+                    "Top" : 0,
+                    "Type" : "blog",
+                    "Width" : 700,
+                    "WidthOfFullView" : 800,
+                    "WordsInPosts" : 100,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Blog"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "thingshape"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableSystemObject="true"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:53.758Z"
+         name="AlarmAckState"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "AcknowledgeAlertIcon",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "true",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "AlertHistory",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "false",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

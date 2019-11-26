@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-09-11T12:33:10.525Z"
+         name="GIT.LeftStateMenu.STATE"
+         projectName="GitBackup"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "GIT.MainIcon.ME",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "Main",
+                "description" : "",
+                "displayString" : "icon",
+                "name" : "icon"
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "GIT.BranchIcon.ME",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "Advanced",
+                "description" : "",
+                "displayString" : "",
+                "name" : "icon"
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "icon",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "GIT.Status.ME",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "Version",
+                "description" : "",
+                "displayString" : "icon",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "GIT.MainIcon.ME",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "description" : "",
+                "displayString" : "Main",
+                "name" : "Main"
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

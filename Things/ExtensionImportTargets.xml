@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <Things>
+        <Thing
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         description="Thing used by ExtensionExportRepositoryHomeMashup to upload selected extensions to a specific target platform"
+         documentationContent="On property [ importTargets ] add a descriptive name for the remote target platform, remote target appKey (tied to an administrative account) and baseURL of the target platform (example: http://localhost:80/Thingworx). Entity can be edited"
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         lastModifiedDate="2019-09-11T12:33:13.524Z"
+         name="ExtensionImportTargets"
+         projectName=""
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.cacheTime="0.0"
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="ExtensionImportTargetDS"
+                     aspect.isLogged="false"
+                     aspect.isPersistent="true"
+                     aspect.isReadOnly="false"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="importTargets"
+                     ordinal="2"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetTargetPlatforms">
+                        <ResultType
+                         aspect.dataShape="GenericStringList"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="ImportExtension">
+                        <ResultType
+                         aspect.dataShape="ExtensionImportReportDS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="appKey"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="baseURL"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.isRequired="false"
+                             baseType="BOOLEAN"
+                             description=""
+                             name="ignoreSSLErrors"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="pathOnRepository"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="platformName"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="STRING"
+                             description=""
+                             name="repository"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.isRequired="true"
+                             baseType="BOOLEAN"
+                             description=""
+                             name="validate"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetTargetPlatforms">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var params = {
+                                        	infoTableName : "InfoTable",
+                                        	dataShapeName : "GenericStringList"
+                                        };
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(GenericStringList)
+                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+                                        
+                                        for (var x = 0; x < me.importTargets.rows.length; x++) {
+                                        	var row = me.importTargets.rows[x];
+                                                var newEntry = new Object()
+                                                newEntry.item = row.name;
+                                                result.AddRow(newEntry);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="ImportExtension">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             description="Script"
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        if (platformName) {
+                                            for (var i = 0; i < me.importTargets.rows.length; i++) {
+                                                var row = me.importTargets.rows[i];
+                                                if (platformName == row.name) {
+                                                    baseURL = row.baseURL;
+                                                     appKey = row.appKey;
+                                                    logger.info("Matched baseURL and appkey for:" + platformName);
+                                        
+                                                }
+                                            }
+                                        }
+                                        
+                                        var params = {
+                                            repository: repository,
+                                            pathOnRepository: pathOnRepository,
+                                            baseURL: baseURL,
+                                            appKey: appKey,
+                                            validate: validate,
+                                            ignoreSSLErrors: ignoreSSLErrors,
+                                            headers: undefined /* JSON */,
+                                            useNTLM: undefined,
+                                            domain: undefined,
+                                            workstation: undefined,
+                                            useProxy: undefined,
+                                            proxyHost: undefined,
+                                            proxyScheme: undefined,
+                                            proxyPort: undefined,
+                                            timeout: undefined
+                                        };
+                                        
+                                        // result: INFOTABLE
+                                        result = Resources["ExtensionsExport"].Import(params);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="importTargets"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties>
+                <importTargets>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="PASSWORD"
+                                     description=""
+                                     name="appKey"
+                                     ordinal="3"></FieldDefinition>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description=""
+                                     name="baseURL"
+                                     ordinal="2"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="true"
+                                     baseType="STRING"
+                                     description=""
+                                     name="name"
+                                     ordinal="1"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <appKey></appKey>
+                                    <baseURL>
+                                    <![CDATA[
+                                    http://localhost:8080/Thingworx
+                                    ]]>
+                                    </baseURL>
+                                    <name>
+                                    <![CDATA[
+                                    localhost
+                                    ]]>
+                                    </name>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2019-11-26T10:01:00.745Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </importTargets>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Extension info data shape"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.116Z"
+         name="ExtensionInfoDataShape"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Extension major version number"
+                 name="extensionMajor"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Extension minor version number"
+                 name="extensionMinor"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Extension name"
+                 name="extensionName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Extension patch version number"
+                 name="extensionPatch"
+                 ordinal="4"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

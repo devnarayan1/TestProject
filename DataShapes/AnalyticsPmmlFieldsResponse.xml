@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b2219"
+ majorVersion="8"
+ minorVersion="4"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="3"
+ schemaVersion="1041"
+ universal="password">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Description of the model inputs"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-05-14T06:10:52.131Z"
+         name="AnalyticsPmmlFieldsResponse"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsModelInputField"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="inputFields"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsModelOutputField"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="outputFields"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsTimeSeriesPmmlValues"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="timeseriesPmmlValues"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>
